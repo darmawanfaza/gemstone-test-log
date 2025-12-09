@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gemstone Test Log</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Gemstone Test Log</h1>
+    <p>Catatan pengujian batu mulia & logam mulia - G-Lab style 😎</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Tambah Data Pengujian</h2>
+      <form id="sampleForm">
+        <div class="form-group">
+          <label for="kodeSample">Kode Sample</label>
+          <input type="text" id="kodeSample" required />
+        </div>
+        <div class="form-group">
+          <label for="namaCustomer">Nama Customer</label>
+          <input type="text" id="namaCustomer" required />
+        </div>
+        <div class="form-group">
+          <label for="jenisBarang">Jenis Barang</label>
+          <select id="jenisBarang" required>
+            <option value="">-- Pilih --</option>
+            <option value="Batu Lepasan">Batu Lepasan</option>
+            <option value="Perhiasan">Perhiasan</option>
+            <option value="Logam Mulia">Logam Mulia</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jenisBatu">Jenis Batu (opsional)</label>
+          <input type="text" id="jenisBatu" placeholder="Ruby, Emerald, Diamond, dll" />
+        </div>
+        <div class="form-group">
+          <label for="metodeUji">Metode Uji</label>
+          <select id="metodeUji" required>
+            <option value="">-- Pilih --</option>
+            <option value="XRF">XRF</option>
+            <option value="UTG">UTG</option>
+            <option value="PMV">PMV</option>
+            <option value="Loupe / Mikroskop">Loupe / Mikroskop</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="hasilUji">Hasil Uji / Catatan</label>
+          <textarea id="hasilUji" rows="3" required></textarea>
+        </div>
+
+        <button type="submit">Simpan</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Daftar Pengujian</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Kode</th>
+            <th>Customer</th>
+            <th>Barang</th>
+            <th>Jenis Batu</th>
+            <th>Metode</th>
+            <th>Hasil</th>
+            <th>Tanggal</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="sampleTableBody">
+          <!-- Data diisi via JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by CHIEF</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
